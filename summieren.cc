@@ -1,18 +1,18 @@
-#include <iostream>
-#include <fstream>
-
-int main()
-{
+#include<iostream>
+#include<fstream>
+int main() {
     std::ifstream fin("daten.txt");
     std::ofstream fout("datensumme.txt");
-    int zahl_a, zahl_b;
-     while(fin >> zahl_a >> zahl_b) {//alles bis Dateiende
-        int sum = zahl_a + zahl_b;
-        std::cout << sum  << std::endl;
-        fout << sum << std::endl;
+    for (int i=0; i<234; ++i){
+        int a, b;
+        fin >> a >> b;
+        std::cout<< a + b <<std::endl;
+        fout << a+b << std::endl;
     }
     fin.close();
     fout.close();
-
-
 }
+
+
+
+    
